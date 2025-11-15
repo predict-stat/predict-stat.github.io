@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREDICT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .predict {
+            font-size: 120px;
+            font-weight: bold;
+            color: #FDB82C;
+            text-shadow: 3px 3px 6px rgba(253, 184, 44, 0.3);
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInPredict 2s ease-in forwards;
+            letter-spacing: 8px;
+        }
+
+        .coming-soon {
+            font-size: 48px;
+            color: #FDB82C;
+            font-style: italic;
+            opacity: 0;
+            animation: fadeInComingSoon 2s ease-in 2.5s forwards;
+            letter-spacing: 2px;
+        }
+
+        @keyframes fadeInPredict {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInComingSoon {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .predict {
+                font-size: 80px;
+                letter-spacing: 5px;
+            }
+            .coming-soon {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .predict {
+                font-size: 60px;
+                letter-spacing: 3px;
+            }
+            .coming-soon {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="predict">PREDICT</div>
+        <div class="coming-soon">coming soon...</div>
+    </div>
+</body>
+</html>
